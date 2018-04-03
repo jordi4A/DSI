@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>AngularJS - Práctica 2</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="js/script.js"></script>
+  </head>
+  <body ng-controller="listController">
+    <h1>List of Items</h1>
+    <hr>
+    <ol>
+      <li ng-repeat="item in items">
+        {{item}}
+      </li>
+    </ol>
+    <hr>
+    <form>
+      <fieldset>
+        <legend>Add new item</legend>
+        <input type="text" ng-model="newItem" placeholder="Item Text">
+        <button ng-click="addItem()">&#43;</button>
+      </fieldset>
+    </form>
+  </body>
+</html>
