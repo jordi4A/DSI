@@ -11,7 +11,7 @@ import { Contact } from '../../models/contact.model';
   templateUrl: 'libreta.html'
 })
 
-export class Agenda {
+export class AgendaPage {
   contacts: Contact[] = [];
 
   constructor(publicnavCtrl: NavController, publicnavParams: NavParams,

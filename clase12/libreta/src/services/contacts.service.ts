@@ -10,8 +10,8 @@ export class ContactService {
   addContact(value: Contact) {
     this.contacts.push(value);
   }
-  
+
   getContacts(){
-    returnthis.contacts;
+    return this.contacts;
   }
 }
