@@ -5,14 +5,18 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-
   <ion-navbar>
     <ion-title>agenda</ion-title>
   </ion-navbar>
-
 </ion-header>
 
-
 <ion-content padding>
-
+  <ion-list>
+    <button ion-item *ngFor="letcontactof contacts" (click)="onItemTapped($event, contact)">
+      <p><strong>Nombre: </strong>{{ contact.nombre }}</p>
+      <p><strong>Organización: </strong>{{ contact.organizacion }}</p>
+      <p><strong>Móvil: </strong>{{ contact.movil }}</p>
+      <p><strong>Correo: </strong>{{ contact.correo }}</p>
+    </button>
+  </ion-list>
 </ion-content>
