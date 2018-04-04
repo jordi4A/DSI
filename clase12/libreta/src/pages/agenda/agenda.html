@@ -5,8 +5,19 @@
   Ionic pages and navigation.
 -->
 <ion-header>
+  <ion-navbarcolor="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Agenda Electrónica</ion-title>
+  </ion-navbar>
   <ion-navbar>
-    <ion-title>agenda</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="onLoadNewPage()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Contactos</ion-title>
   </ion-navbar>
 </ion-header>
 
