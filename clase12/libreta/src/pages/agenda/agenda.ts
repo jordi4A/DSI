@@ -1,25 +1,31 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the AgendaPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { NuevoContactoPage } from '../../pages/nuevo-contacto/nuevo-contacto';
+import { ContactService } from '../../services/contacts.services';
+import { Contact } from '../../models/contact.model';
 
 @IonicPage()
+
 @Component({
-  selector: 'page-agenda',
-  templateUrl: 'agenda.html',
+  selector: 'page-libreta',
+  templateUrl: 'libreta.html'
 })
-export class AgendaPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+export class LibretaPage {
+  contacts: Contact[] = [];
+
+  constructor(publicnavCtrl: NavController, publicnavParams: NavParams,
+    privateContactService: ContactService) {
+
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad AgendaPage');
+  ionViewWillEnter() {
+    this.contacts = this.ContactService.getContacts();
   }
+  onLoadNewPage() {
+    this.navCtrl.push(NuevoContactoPage);
+  }
+  onItemTapped($event, contact) {
 
+  }
 }
